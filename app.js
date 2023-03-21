@@ -2,11 +2,14 @@ let express = require('express');
 let app = express();
 const mongo = require('mongodb');
 const MongoClient= mongo.MongoClient;
-const mongoUrl= "mongodb+srv://Pankaj:Pankaj@123@cluster0.cd60j.mongodb.net/?retryWrites=true&w=majority";
+const dotenv = require('dotenv')
+dotenv.config()
+//mongodb+srv://<username>:<password>@cluster0.cd60j.mongodb.net/?retryWrites=true&w=majority
+const mongoUrl= "mongodb+srv://PankajKumar:MapleGreen123@cluster0.cd60j.mongodb.net/?retryWrites=true&w=majority";
 const bodyParser = require('body-parser');
 const cors = require('cors');
 let port = process.env.PORT || 6800;
-var db;
+let db;
 
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
